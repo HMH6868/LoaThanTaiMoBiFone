@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 /* Cải thiện phần Header */
 header {
     background-color: #7D0000;
@@ -53,18 +54,27 @@ header {
     margin: 0 10px;
 }
 
+.phantongquan{
+    height: 1000px;
+}
+.tongquan{
+    min-height: 50vh;
+    background-color: #7D0000;
+}
+
 /* Phần Tổng Quan */
 .overview-section {
+    min-width: 1000px;
+    max-width: 100%;
     background-color: #F5EEE4;
     padding: 60px 20px;
     text-align: center;
-    margin-top: -50px;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    margin-top: -10px;
+    border-radius: 10px;
 }
 
 .overview-section h2 {
-    font-family: 'Alfa Slab One', sans-serif;
+    font-family: "Playfair Display", serif;
     font-size: 2rem;
     color: #7D0000;
     font-weight: bold;
@@ -78,22 +88,25 @@ header {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
     border-radius: 10px;
 }
 
+
+
+
 /* Phần Media (Video YouTube) */
 .media-section {
-    background-color: #f5f5f5; /* Màu nền cho phần Media */
-    padding: 40px 20px; /* Thêm khoảng cách cho phần Media */
-    text-align: center; /* Căn giữa chữ trong phần này */
-    margin-top: 50px; /* Thêm khoảng cách trên */
+    min-width: 1000px;
+    max-width: 100%;
+    text-align: center;
+    margin-top: -10px;
+    border-radius: 10px;
 }
 
 .media-section h2 {
-    font-family: 'Alfa Slab One', sans-serif;
+    font-family: "Playfair Display", serif;
     font-size: 2rem;
-    color: #7D0000;
+    color: #333;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -110,7 +123,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 1000px;
     height: 100%;
     border: none;
 }
