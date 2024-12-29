@@ -1,6 +1,7 @@
 /* Cải thiện phần Header */
 header {
     background-color: #7D0000;
+    font-size: 1.2rem;
 }
 
 .navbar-nav .nav-link {
@@ -24,7 +25,7 @@ header {
     text-align: center;
     position: relative;
     background: url('./image/MammonSpeaker.png') center no-repeat;
-    background-size: cover;
+    background-size: auto;
 }
 
 .background-section img {
@@ -44,9 +45,13 @@ header {
     line-height: 1.5;
     text-align: left; /* Căn chữ sang trái */
     width: auto; /* Tự động điều chỉnh chiều rộng */
-    margin: 0;
+    margin-bottom : 100px;
 }
 
+
+.nav-item {
+    margin: 0 10px;
+}
 
 /* Phần Tổng Quan */
 .overview-section {
