@@ -281,7 +281,7 @@ header {
 .carousel {
     position: relative;
     width: 80%; /* Chiều rộng carousel */
-    max-width: 900px;
+    max-width: 1300px;
     margin: 0 auto;
     overflow: hidden; /* Ẩn các ảnh ngoài phạm vi hiển thị */
 }
@@ -319,5 +319,118 @@ header {
     right: 10px;
 }
 
+  .card {
+        border-radius: 15px;
+        background-color: #f44336;
+        color: white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
 
-  
+    .form-control, .form-select, .form-label {
+        font-size: 1.1rem;
+    }
+
+    .form-control-lg, .form-select-lg {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+
+    .btn-light {
+        background-color: white;
+        color: #f44336;
+        font-weight: bold;
+        border-radius: 50px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-light:hover {
+        background-color: #ff5722;
+        color: white;
+    }
+
+    .card-body {
+        padding: 2rem;
+    }
+
+    h5.card-title {
+        font-weight: bold;
+        font-size: 1.6rem;
+    }
+
+    .form-control:focus, .form-select:focus {
+        border-color: #ff5722;
+        box-shadow: 0 0 5px rgba(255, 87, 34, 0.5);
+    }
+    #info {
+        background-color: #7D0000; /* Màu nền đồng nhất với giao diện */
+        color: white; /* Màu chữ trắng để tạo độ tương phản */
+        padding: 40px 20px; /* Tạo khoảng cách bên trong */
+        display: flex; /* Dùng flexbox để căn chỉnh */
+        flex-wrap: wrap; /* Đảm bảo responsive cho các màn hình nhỏ */
+        justify-content: space-between; /* Căn đều các mục */
+        align-items: center; /* Canh giữa theo chiều dọc */
+        gap: 20px; /* Khoảng cách giữa các phần tử */
+        font-size: 1rem; /* Kích thước chữ chung */
+    }
+    
+    #info img {
+        height: 50px; /* Định kích thước ảnh icon */
+        width: 50px; /* Định kích thước ảnh icon */
+        margin-right: 15px; /* Tạo khoảng cách giữa icon và nội dung */
+    }
+    
+    #info p {
+        margin: 0;
+        font-size: 1.1rem; /* Kích thước chữ dễ đọc */
+        line-height: 1.5; /* Khoảng cách dòng */
+    }
+    
+    #info div {
+        display: flex; /* Sử dụng flex để căn chỉnh icon và nội dung */
+        align-items: center; /* Canh giữa icon và chữ theo chiều dọc */
+        flex: 1; /* Đảm bảo các mục co dãn đều nhau */
+        max-width: 400px; /* Giới hạn chiều rộng của từng mục */
+    }
+    
+    #info div:nth-child(1) {
+        flex: 0.5; /* Logo chiếm ít không gian hơn */
+        justify-content: center; /* Căn giữa logo */
+    }
+    
+    #info img:first-child {
+        height: 80px; /* Tăng kích thước logo */
+        width: auto; /* Giữ tỉ lệ logo */
+    }
+    
+    #info a {
+        color: #FFD700; /* Màu vàng để nổi bật */
+        text-decoration: none; /* Xóa gạch chân */
+        font-weight: bold; /* Tô đậm chữ */
+        transition: color 0.3s ease; /* Hiệu ứng khi hover */
+    }
+    
+    #info a:hover {
+        color: white; /* Đổi màu khi hover */
+    }
+    
+    /* Responsive cho màn hình nhỏ */
+    @media (max-width: 768px) {
+        #info {
+            flex-direction: column; /* Chuyển các mục xếp dọc */
+            text-align: center; /* Căn giữa nội dung */
+        }
+    
+        #info div {
+            max-width: none; /* Bỏ giới hạn chiều rộng */
+            margin-bottom: 20px; /* Tạo khoảng cách giữa các mục */
+        }
+    
+        #info img {
+            height: 40px; /* Giảm kích thước icon */
+            width: 40px;
+        }
+    
+        #info img:first-child {
+            height: 60px; /* Giảm kích thước logo */
+        }
+    }

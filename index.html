@@ -30,16 +30,16 @@
                                     <a class="nav-link active" href="#overview-section">TỔNG QUAN</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">GIẢI PHÁP</a>
+                                    <a class="nav-link" href="#reasons-section">ƯU ĐIỂM</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">ƯU ĐIỂM</a>
+                                    <a class="nav-link" href="#unique-reasons-section">GIẢI PHÁP</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">KHÁCH HÀNG</a>
+                                    <a class="nav-link" href="#carousel">KHÁCH HÀNG</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">LIÊN HỆ</a>
+                                    <a class="nav-link" href="#contact">LIÊN HỆ</a>
                                 </li>
                             </ul>
                         </div>
@@ -53,7 +53,7 @@
             </div>
 
             <div class="tongquan d-flex justify-content-center align-items-center"">
-            <section id=" overview-section" class="overview-section text-center">
+            <section id="overview-section" class="overview-section text-center">
                 <h2>TỔNG QUAN VỀ LOA</h2>
                 <p>Loa Thần tài MobiFone là giải pháp phát âm thanh bằng giọng nói ứng dụng công nghệ trí tuệ nhân tạo của MobiFone. Nhằm thông báo chính xác kết quả trong từng giao dịch thanh toán thành công. Giúp người bán rảnh tay bán hàng, nhận tiền nhanh chóng và an toàn.</p>
                 </section>
@@ -246,7 +246,11 @@
                 </section>
             </div>
         </div>
-        <div class="carousel">
+        <div class="carousel" id="carousel">
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; height: 100%; width: 100%;">
+                <h3 style="color: #7D0000; font-size: 50px;">9.000+</h3>
+                <p>Chủ cửa hàng tại TP. Hà Nội và TP. Hồ Chí Minh đã sử dụng</p>
+            </div>            
             <div class="carousel-container">
                 <img src="./image/Screenshot 2024-12-30 130236.png" alt="Ảnh 1">
                 <img src="./image/Screenshot 2024-12-30 130246.png" alt="Ảnh 2">
@@ -257,41 +261,57 @@
             <button class="carousel-button prev">‹</button>
             <button class="carousel-button next">›</button>
         </div>
-        <script>
-            const carousel = document.querySelector('.carousel-container');
-            const images = Array.from(document.querySelectorAll('.carousel img'));
-            const prevButton = document.querySelector('.carousel-button.prev');
-            const nextButton = document.querySelector('.carousel-button.next');
-
-            let currentIndex = 0; 
-
-            function updateCarousel() {
-                const orderedImages = [
-                    images[currentIndex],
-                    images[(currentIndex + 1) % images.length],
-                    images[(currentIndex + 2) % images.length],
-                ];
-
-                carousel.innerHTML = '';
-                orderedImages.forEach(image => {
-                    carousel.appendChild(image);
-                });
-            }
-
-            // Xử lý nút prev
-            prevButton.addEventListener('click', () => {
-                currentIndex = (currentIndex - 1 + images.length) % images.length;
-                updateCarousel();
-            });
-
-            // Xử lý nút next
-            nextButton.addEventListener('click', () => {
-                currentIndex = (currentIndex + 1) % images.length; 
-                updateCarousel();
-            });
-
-            updateCarousel();
-        </script>
+        <img src="./image/Screenshot 2024-12-30 193549.png" alt="">
+        <div class="container mt-5" id="contact">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card bg-danger text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Kết nối với Loa Thần Tài MobiFone</h5>
+                            <p class="card-text">Giá: 880.000₫/Thiết bị (bao gồm sim data 4G)</p>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="fullname" class="form-label">Họ và tên</label>
+                                    <input type="text" class="form-control" id="fullname" placeholder="Nhập họ và tên">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Số điện thoại</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="Nhập số điện thoại">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="province" class="form-label">Tỉnh thành</label>
+                                    <select class="form-select" id="province">
+                                        <option value="hn">Hà Nội</option>
+                                        </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Lời nhắn</label>
+                                    <textarea class="form-control" id="message" rows="3" placeholder="Bạn muốn..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-light">Nhận tư vấn ngay</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="info">
+            <img src="./image/Logo.37c4965b.svg" alt="Logo">
+            <div>
+                <img src="./image/locationIcon.3343e933.svg" alt="">
+                <p>Tổng công ty viễn thông MobiFone số 01 phố Phạm Văn Bạch, Yên Hòa, Cầu Giấy, Hà Nội.</p>
+            </div>
+            <div>
+                <img src="./image/phoneIcon.20efbe9d.svg" alt="">
+                <p>Tư vấn sản phẩm: 0936.110.116 <br> <span>Hỗ trợ kỹ thuật: 0896.15.16.17</span></p>
+            </div>
+            <div>
+                <img src="./image/emailIconFooter.png" alt="">
+                <p>loathantai@mobifone.vn</p>
+            </div>
+        </div>
+        
+        <script src="./assets/main.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-ltrjvnR4Twt/qOuYxF8z9GHXR6ckTOpM4sEzJHRTMjNl8m9H9V8PHNsZeWJxRNsD" crossorigin="anonymous"></script>
     </body>
