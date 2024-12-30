@@ -278,23 +278,21 @@ header {
 
 .carousel {
     position: relative;
-    width: 100%;
-    overflow: hidden; /* Đảm bảo các hình ảnh ngoài phạm vi sẽ bị ẩn */
+    width: 80%; /* Căn giữa carousel */
+    max-width: 900px; /* Giới hạn chiều rộng tối đa */
+    margin: 0 auto;
+    overflow: hidden; /* Ẩn các ảnh ngoài vùng hiển thị */
 }
 
 .carousel-container {
-    display: flex; /* Hiển thị các item theo hàng ngang */
-    transition: transform 0.5s ease-in-out; /* Hiệu ứng chuyển động mượt mà khi di chuyển các item */
-}
-
-.carousel-item {
-    min-width: 100%; /* Mỗi item sẽ chiếm toàn bộ chiều rộng của carousel */
-    box-sizing: border-box;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .carousel img {
-    width: 100%;
-    height: auto; /* Đảm bảo hình ảnh luôn phù hợp với chiều rộng của item */
+    flex: 0 0 calc(100% / 3); /* Mỗi ảnh chiếm 1/3 vùng hiển thị */
+    max-width: calc(100% / 3);
+    height: auto; /* Đảm bảo giữ tỷ lệ ảnh */
 }
 
 .carousel-button {
@@ -307,6 +305,7 @@ header {
     padding: 10px;
     cursor: pointer;
     font-size: 20px;
+    z-index: 10;
 }
 
 .carousel-button.prev {
@@ -316,5 +315,6 @@ header {
 .carousel-button.next {
     right: 10px;
 }
+
 
   
