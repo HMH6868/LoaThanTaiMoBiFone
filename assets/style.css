@@ -25,7 +25,7 @@ header {
     align-items: center;
     text-align: center;
     position: relative;
-    background: url('./image/MammonSpeaker.png') center no-repeat;
+    background: url('../image/MammonSpeaker.png') center no-repeat;
     background-size: auto;
 }
 
@@ -278,21 +278,22 @@ header {
 
 .carousel {
     position: relative;
-    width: 80%; /* Căn giữa carousel */
-    max-width: 900px; /* Giới hạn chiều rộng tối đa */
+    width: 80%; /* Chiều rộng carousel */
+    max-width: 900px;
     margin: 0 auto;
-    overflow: hidden; /* Ẩn các ảnh ngoài vùng hiển thị */
+    overflow: hidden; /* Ẩn các ảnh ngoài phạm vi hiển thị */
 }
 
 .carousel-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    will-change: transform; /* Cải thiện hiệu suất */
 }
 
 .carousel img {
     flex: 0 0 calc(100% / 3); /* Mỗi ảnh chiếm 1/3 vùng hiển thị */
     max-width: calc(100% / 3);
-    height: auto; /* Đảm bảo giữ tỷ lệ ảnh */
+    height: auto;
 }
 
 .carousel-button {

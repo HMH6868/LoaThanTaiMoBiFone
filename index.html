@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./assets/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <title>Loa Thần Tài MoBiFone</title>
@@ -246,51 +246,52 @@
                 </section>
             </div>
         </div>
-        <div>
-            <div class="carousel">
-                <div class="carousel-container">
-                    <img src="./image/Screenshot 2024-12-30 130236.png" alt="Ảnh 1">
-                    <img src="./image/Screenshot 2024-12-30 130246.png" alt="Ảnh 2">
-                    <img src="./image/Screenshot 2024-12-30 130240.png" alt="Ảnh 3">
-                    <img src="./image/Screenshot 2024-12-30 130232.png" alt="Ảnh 4">
-                </div>
-                <!-- Nút điều hướng -->
-                <button class="carousel-button prev">‹</button>
-                <button class="carousel-button next">›</button>
+        <div class="carousel">
+            <div class="carousel-container">
+                <img src="./image/Screenshot 2024-12-30 130236.png" alt="Ảnh 1">
+                <img src="./image/Screenshot 2024-12-30 130246.png" alt="Ảnh 2">
+                <img src="./image/Screenshot 2024-12-30 130240.png" alt="Ảnh 3">
+                <img src="./image/Screenshot 2024-12-30 130232.png" alt="Ảnh 4">
             </div>
+            <!-- Nút điều hướng -->
+            <button class="carousel-button prev">‹</button>
+            <button class="carousel-button next">›</button>
         </div>
-        
-        
         <script>
             const carousel = document.querySelector('.carousel-container');
-            const images = document.querySelectorAll('.carousel img');
+            const images = Array.from(document.querySelectorAll('.carousel img'));
             const prevButton = document.querySelector('.carousel-button.prev');
             const nextButton = document.querySelector('.carousel-button.next');
 
-            let currentIndex = 0;
+            let currentIndex = 0; 
 
             function updateCarousel() {
-                const width = document.querySelector('.carousel').offsetWidth;
-                carousel.style.transform = `translateX(-${currentIndex * width}px)`;
+                const orderedImages = [
+                    images[currentIndex],
+                    images[(currentIndex + 1) % images.length],
+                    images[(currentIndex + 2) % images.length],
+                ];
+
+                carousel.innerHTML = '';
+                orderedImages.forEach(image => {
+                    carousel.appendChild(image);
+                });
             }
 
+            // Xử lý nút prev
             prevButton.addEventListener('click', () => {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    updateCarousel();
-                }
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateCarousel();
             });
 
+            // Xử lý nút next
             nextButton.addEventListener('click', () => {
-                if (currentIndex < images.length - 3) { // Chỉ cuộn nếu còn ảnh
-                    currentIndex++;
-                    updateCarousel();
-                }
+                currentIndex = (currentIndex + 1) % images.length; 
+                updateCarousel();
             });
 
-            window.addEventListener('resize', updateCarousel);
-
-    </script>
+            updateCarousel();
+        </script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-ltrjvnR4Twt/qOuYxF8z9GHXR6ckTOpM4sEzJHRTMjNl8m9H9V8PHNsZeWJxRNsD" crossorigin="anonymous"></script>
     </body>
