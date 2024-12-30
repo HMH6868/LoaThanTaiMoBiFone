@@ -53,7 +53,7 @@
             </div>
 
             <div class="tongquan d-flex justify-content-center align-items-center"">
-            <section id="overview-section" class="overview-section text-center">
+            <section id=" overview-section" class="overview-section text-center">
                 <h2>TỔNG QUAN VỀ LOA</h2>
                 <p>Loa Thần tài MobiFone là giải pháp phát âm thanh bằng giọng nói ứng dụng công nghệ trí tuệ nhân tạo của MobiFone. Nhằm thông báo chính xác kết quả trong từng giao dịch thanh toán thành công. Giúp người bán rảnh tay bán hàng, nhận tiền nhanh chóng và an toàn.</p>
                 </section>
@@ -250,7 +250,7 @@
             <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; height: 100%; width: 100%;">
                 <h3 style="color: #7D0000; font-size: 50px;">9.000+</h3>
                 <p>Chủ cửa hàng tại TP. Hà Nội và TP. Hồ Chí Minh đã sử dụng</p>
-            </div>            
+            </div>
             <div class="carousel-container">
                 <img src="./image/Screenshot 2024-12-30 130236.png" alt="Ảnh 1">
                 <img src="./image/Screenshot 2024-12-30 130246.png" alt="Ảnh 2">
@@ -269,7 +269,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Kết nối với Loa Thần Tài MobiFone</h5>
                             <p class="card-text">Giá: 880.000₫/Thiết bị (bao gồm sim data 4G)</p>
-                            <form>
+                            <form id="myForm">
                                 <div class="mb-3">
                                     <label for="fullname" class="form-label">Họ và tên</label>
                                     <input type="text" class="form-control" id="fullname" placeholder="Nhập họ và tên">
@@ -281,14 +281,46 @@
                                 <div class="mb-3">
                                     <label for="province" class="form-label">Tỉnh thành</label>
                                     <select class="form-select" id="province">
-                                        <option value="hn">Hà Nội</option>
-                                        </select>
+                                        <option value="hanoi">Hà Nội</option>
+                                        <option value="hcm">TP.Hồ Chí Minh</option>
+                                    </select>
                                 </div>
                                 <div class="mb-3">
                                     <label for="message" class="form-label">Lời nhắn</label>
                                     <textarea class="form-control" id="message" rows="3" placeholder="Bạn muốn..."></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-light">Nhận tư vấn ngay</button>
+                                <button type="submit" class="btn btn-light mx-auto">Nhận tư vấn ngay</button>
+
+                                <script>
+                                    const form = document.getElementById('myForm');
+                                    form.addEventListener('submit', function(e) {
+                                        e.preventDefault();
+
+                                        const fullname = document.getElementById('fullname').value;
+                                        const phone = document.getElementById('phone').value;
+                                        const province = document.getElementById('province').value;
+                                        const message = document.getElementById('message').value;
+
+                                        fetch('https://script.google.com/macros/s/AKfycbwMrke8S0PSe99q5DxAB8FqLPgA8Vo46m0GBZW8KQ0fafiBFjs74oAuJVZiIGFQqAp6/exec', { 
+                                                method: 'POST',
+                                                body: new URLSearchParams({
+                                                    fullname: fullname,
+                                                    phone: phone,
+                                                    province: province,
+                                                    message: message
+                                                })
+                                            })
+                                            .then(response => response.text())
+                                            .then(data => {
+                                                alert(data);
+                                                form.reset();
+                                            })
+                                            .catch(error => {
+                                                console.error('Error:', error);
+                                                alert('Đã xảy ra lỗi!');
+                                            });
+                                    });
+                                </script>
                             </form>
                         </div>
                     </div>
@@ -310,7 +342,7 @@
                 <p>loathantai@mobifone.vn</p>
             </div>
         </div>
-        
+
         <script src="./assets/main.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-ltrjvnR4Twt/qOuYxF8z9GHXR6ckTOpM4sEzJHRTMjNl8m9H9V8PHNsZeWJxRNsD" crossorigin="anonymous"></script>
