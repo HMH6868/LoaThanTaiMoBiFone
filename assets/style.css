@@ -212,6 +212,8 @@ header {
     color: #7D0000;
     font-weight: bold;
     margin-bottom: 40px;
+
+    white-space: nowrap; 
 }
 
 /* Wrapper for the boxes */
