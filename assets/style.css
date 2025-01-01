@@ -6,21 +6,22 @@ header {
     font-size: 1.2rem;
 }
 
-.navbar-nav .nav-link {
+.container .nav-header {
     font-weight: bold;
     color: white !important;
     text-decoration: none !important;
     transition: color 0.3s ease;
+    margin:0 20px;
 }
 
-.navbar-nav .nav-link:hover {
+.container .nav-header:hover {
     color: #FFD700 !important;
 }
 
-/* Phần Background */
+
 .background-section {
     height: 100vh;
-    /* Chiều cao toàn màn hình */
+    margin-top: -100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,7 +35,6 @@ header {
 .background-section img {
     max-width: 80%;
     opacity: 0.5;
-    /* Giảm độ sáng của hình ảnh */
 }
 
 .background-section h1 {
@@ -44,79 +44,42 @@ header {
     font-weight: bold;
     position: absolute;
     bottom: 20px;
-    /* Đặt khoảng cách từ dưới */
     left: 20px;
-    /* Đặt khoảng cách từ trái */
     z-index: 6;
     line-height: 1.5;
     text-align: left;
-    /* Căn chữ sang trái */
     width: auto;
-    /* Tự động điều chỉnh chiều rộng */
     margin-bottom: 100px;
 }
 
 
-.nav-item {
-    margin: 0 10px;
-}
 
-.phantongquan {
-    height: 1000px;
-}
-
-.tongquan {
+.tong-quan {
     min-height: 50vh;
     background-color: #7D0000;
 }
 
-/* Phần Tổng Quan */
-.overview-section {
-    min-width: 1000px;
-    max-width: 100%;
-    background-color: #F5EEE4;
-    padding: 60px 20px;
+
+.tongquan-section {
     text-align: center;
-    margin-top: -10px;
     border-radius: 10px;
+    background-color: #ebe3d8;
+    width: auto;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 50px 100px;
 }
 
-.overview-section h2 {
+.tongquan-section h2 {
     font-family: "Playfair Display", serif;
     font-size: 2rem;
-    color: #7D0000;
+    color: #333;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
-.overview-section p {
+.tongquan-section p{
     font-size: 1.2rem;
-    color: #333;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-
-
-
-/* Phần Media (Video YouTube) */
-.media-section {
-    min-width: 1000px;
-    max-width: 100%;
-    text-align: center;
-    margin-top: -10px;
-    border-radius: 10px;
-}
-
-.media-section h2 {
-    font-family: "Playfair Display", serif;
-    font-size: 2rem;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 20px;
 }
 
 .video-container {
@@ -124,7 +87,7 @@ header {
     /* Đảm bảo video không vượt quá chiều rộng */
     position: relative;
     padding-bottom: 56.25%;
-    /* Tỷ lệ 16:9 */
+
     height: 0;
     overflow: hidden;
 }
@@ -137,6 +100,32 @@ header {
     height: 100%;
     border: none;
 }
+
+.uu-diem{
+    background-color: #f8f9fa!important;
+    min-width: 100%;
+}
+.reason-box1 {
+    min-width: 300px;
+    height: 150px;
+    margin: 10px 20px;
+}
+
+
+#contact{
+    margin-top: -100px;
+}
+
+footer {
+    background-color: #7D0000;
+    padding: 20px 0;
+}
+footer p{
+    margin-top: 10px;
+    color: #fff;
+}
+
+
 
 /* Section styling */
 .reasons-section {
@@ -469,6 +458,7 @@ h5.card-title {
 }
 
 /* Responsive cho màn hình nhỏ */
+
 @media (max-width: 768px) {
     #info {
         flex-direction: column;
