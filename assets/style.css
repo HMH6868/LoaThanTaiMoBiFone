@@ -2,7 +2,7 @@
 
 /* Cải thiện phần Header */
 header {
-    background-color: #7D0000;
+    background-color: #00A8A8;
     font-size: 1.2rem;
 }
 
@@ -20,7 +20,7 @@ header {
 
 
 .background-section {
-    height: 100vh;
+    height: 34.5vh;
     margin-top: -100px;
     display: flex;
     flex-direction: column;
@@ -28,7 +28,7 @@ header {
     align-items: center;
     text-align: center;
     position: relative;
-    background: url('../image/MammonSpeaker.png') center no-repeat;
+    background: url('../image/banner.png') center no-repeat;
     background-size: auto;
 }
 
@@ -40,7 +40,7 @@ header {
 .background-section h1 {
     font-family: 'Alfa Slab One', sans-serif;
     font-size: 2rem;
-    color: #7D0000;
+    color: #00A8A8;
     font-weight: bold;
     position: absolute;
     bottom: 20px;
@@ -56,7 +56,7 @@ header {
 
 .tong-quan {
     min-height: 50vh;
-    background-color: #7D0000;
+    background-color: #00A8A8;
 }
 
 
@@ -117,7 +117,7 @@ header {
 }
 
 footer {
-    background-color: #7D0000;
+    background-color: #00A8A8;
     padding: 20px 0;
 }
 footer p{
@@ -129,7 +129,7 @@ footer p{
 
 /* Section styling */
 .reasons-section {
-    background-color: #7D0000;
+    background-color: #00A8A8;
     color: #fff;
     padding: 50px 20px;
     text-align: center;
@@ -161,7 +161,7 @@ footer p{
 
 .reason-box {
     background: #fff;
-    color: #7D0000;
+    color: #00A8A8;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -216,7 +216,7 @@ footer p{
 .unique-reasons-title {
     font-family: "Arial", sans-serif;
     font-size: 2.5rem;
-    color: #7D0000;
+    color: #00A8A8;
     font-weight: bold;
     margin-bottom: 40px;
 
@@ -240,7 +240,7 @@ footer p{
     justify-content: center;
     align-items: center;
     background-color: white;
-    color: #7D0000;
+    color: #00A8A8;
     font-weight: bold;
     font-size: 1.5rem;
     border-radius: 8px;
@@ -332,7 +332,7 @@ footer p{
 
 .card {
     border-radius: 15px;
-    background-color: #f44336;
+    background-color: #29a1b6;
     margin-bottom: 50px;
     color: white;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -352,14 +352,14 @@ footer p{
 
 .btn-light {
     background-color: white;
-    color: #f44336;
+    color: #29a1b6;
     font-weight: bold;
     border-radius: 50px;
     transition: background-color 0.3s ease;
 }
 
 .btn-light:hover {
-    background-color: #ff5722;
+    background-color: #29a1b6;
     color: white;
 }
 
@@ -372,14 +372,14 @@ h5.card-title {
     font-size: 1.6rem;
 }
 
-.form-control:focus,
+.form-control:focus,    
 .form-select:focus {
-    border-color: #ff5722;
-    box-shadow: 0 0 5px rgba(255, 87, 34, 0.5);
+    border-color: #29a1b6;
+    box-shadow: 0 0 5px rgba(18, 198, 211, 0.5);
 }
 
 #info {
-    background-color: #7D0000;
+    background-color: #00A8A8;
     /* Màu nền đồng nhất với giao diện */
     color: white;
     /* Màu chữ trắng để tạo độ tương phản */
@@ -485,3 +485,22 @@ h5.card-title {
         /* Giảm kích thước logo */
     }
 }
+
+
+.uu-diem .reason-icon img {
+    width: 150px; /* Hoặc giá trị bạn mong muốn */
+    height: auto; /* Để giữ nguyên tỷ lệ khung hình */
+}
+
+
+.btn-danger {
+    background-color: #00A8A8 !important; /* Thay đổi màu nền */
+    border-color: #008080 !important; /* Thay đổi màu viền */
+    color: white !important; /* Thay đổi màu chữ */
+}
+
+.btn-danger:hover {
+    background-color: #007777 !important; /* Màu khi hover */
+    border-color: #005555 !important; /* Viền khi hover */
+}
+
