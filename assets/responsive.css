@@ -19,15 +19,24 @@
         color: #FFD700 !important;
     }
 
+    /* 
     .fw-bold{
         font-size: 1.3rem !important;
+    } */
+
+    .background-section h1 {
+        white-space: nowrap;
+        font-size: 1.2rem !important; 
+        letter-spacing: 1px; 
     }
+
     
     .tongquan-section{
         padding: 10px 10px;
+        width: 95%;
 
     }
-    
+
     .tongquan-section h2  {
         font-size: 1.5rem;
         margin-bottom: 15px !important;
@@ -36,6 +45,12 @@
     .tongquan-section p{
         font-size: 1rem;
     }
+
+    .tongquan-section img{
+        height: 40px;
+        margin: -10px 0 20px 0;
+    }
+    
 
     .reason-box1 {
         min-width: 300px;
