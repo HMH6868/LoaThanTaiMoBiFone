@@ -3,7 +3,7 @@
 /* Cải thiện phần Header */
 header {
     background-color: #7D0000;
-    font-size: 1.2rem;
+
 }
 
 .container .nav-header {
@@ -12,6 +12,7 @@ header {
     text-decoration: none !important;
     transition: color 0.3s ease;
     margin:0 20px;
+    font-size: 1.25rem;
 }
 
 .container .nav-header:hover {
