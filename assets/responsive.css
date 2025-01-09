@@ -67,4 +67,26 @@
     #contact{
         margin-top: -50px;
     }
+
+    .content h2 {
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .content ul li {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .content i {
+        font-size: 17px;
+        padding-right: 5px;
+    }
+
+    img.img1 {
+        width: 100px;
+        height: auto;
+        margin-bottom: -30px;
+    }
 }

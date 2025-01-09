@@ -541,3 +541,48 @@ form label {
     display: block;
     text-align: left;
 }
+
+
+.content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.content ul {
+    text-align: left;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.content ul li {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.content i {
+    font-size: 20px;
+    color: #7D0000;
+    padding-right: 10px;
+}
+
+.content img {
+    max-width: 100%;
+    width: 117px;
+    aspect-ratio: auto 117 / 120;
+    height: 120px;
+    margin: 5px;
+}
+img.img1 {
+    width: 200px;
+    height: auto;
+    margin-bottom: -100px;
+}
