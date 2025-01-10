@@ -598,8 +598,23 @@ img.img1 {
 }
 .fixed-icons a {
     margin-bottom: 10px; /* Khoảng cách giữa các icon */
+    display: inline-block; /* Cần thiết để áp dụng animation */
 }
 .fixed-icons img {
     width: 40px;
     height: 40px;
+}
+
+/* Hiệu ứng rung lắc */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Áp dụng hiệu ứng rung lắc liên tục */
+.fixed-icons img {
+    animation: shake 0.5s ease-in-out infinite; /* Lặp lại hiệu ứng */
 }
