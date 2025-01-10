@@ -586,3 +586,20 @@ img.img1 {
     height: auto;
     margin-bottom: -100px;
 }
+
+.fixed-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column; /* Sắp xếp theo chiều dọc */
+    align-items: flex-end; /* Căn phải các icon */
+}
+.fixed-icons a {
+    margin-bottom: 10px; /* Khoảng cách giữa các icon */
+}
+.fixed-icons img {
+    width: 40px;
+    height: 40px;
+}
