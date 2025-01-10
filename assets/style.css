@@ -75,7 +75,7 @@ header {
 .tongquan-section h2 {
     font-family: "Playfair Display", serif;
     font-size: 2rem;
-    color: #333;
+    color: #333 !important;
     font-weight: bold;
 }
 
@@ -587,34 +587,48 @@ img.img1 {
     margin-bottom: -100px;
 }
 
+
 .fixed-icons {
     position: fixed;
-    bottom: 20px;
     right: 20px;
-    z-index: 1000;
+    bottom: 20px;
     display: flex;
-    flex-direction: column; /* Sắp xếp theo chiều dọc */
-    align-items: flex-end; /* Căn phải các icon */
-}
-.fixed-icons a {
-    margin-bottom: 10px; /* Khoảng cách giữa các icon */
-    display: inline-block; /* Cần thiết để áp dụng animation */
-}
-.fixed-icons img {
-    width: 40px;
-    height: 40px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    z-index: 1000;
 }
 
-/* Hiệu ứng rung lắc */
-@keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(0); }
+
+.fixed-icons img {
+    width: 50px;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: float 3s ease-in-out infinite; 
 }
 
-/* Áp dụng hiệu ứng rung lắc liên tục */
-.fixed-icons img {
-    animation: shake 0.5s ease-in-out infinite; /* Lặp lại hiệu ứng */
+
+.fixed-icons a:hover img {
+    animation: float 1s ease-in-out infinite, moveLeft 0.3s ease forwards; 
+    opacity: 0.8;
+}
+
+/* Định nghĩa animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Di chuyển lên xuống */
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-10px); /* Di chuyển sang trái khi hover */
+    }
 }

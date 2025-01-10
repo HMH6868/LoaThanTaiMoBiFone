@@ -1,5 +1,3 @@
-
-
 window.onload = function() {
     var element = document.getElementById('contact');
     element.scrollIntoView();
