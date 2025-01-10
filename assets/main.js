@@ -39,3 +39,50 @@ form.addEventListener('submit', function(e) {
             submitButton.disabled = false;
         });
 });
+
+
+
+let currentIndex = 0;
+const cards = document.querySelectorAll('.profile-card');
+const totalCards = cards.length;
+
+function showCards() {
+    cards.forEach((card, index) => {
+        if (index >= currentIndex && index < currentIndex + getCardsPerView()) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+function getCardsPerView() {
+    return window.innerWidth <= 767 ? 1 : 3; // 1 thẻ trên điện thoại, 3 thẻ trên máy tính
+}
+
+function next() {
+    if (currentIndex < totalCards - getCardsPerView()) {
+        currentIndex++;
+    } else {
+        currentIndex = 0; // Quay lại thẻ đầu tiên nếu đang ở thẻ cuối
+    }
+    showCards();
+}
+
+function prev() {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = totalCards - getCardsPerView(); // Quay lại thẻ cuối nếu đang ở thẻ đầu
+    }
+    showCards();
+}
+
+document.getElementById('nextBtn').addEventListener('click', next);
+document.getElementById('prevBtn').addEventListener('click', prev);
+
+// Khởi tạo hiển thị thẻ đầu tiên
+showCards();
+
+// Cập nhật khi thay đổi kích thước màn hình
+window.addEventListener('resize', showCards);

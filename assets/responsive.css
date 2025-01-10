@@ -59,11 +59,6 @@
         margin: 0px ;
     }
 
-    .danhgia img{
-        min-width: 300px;
-        min-height: 200px;
-    }
-
     #contact{
         margin-top: -50px;
     }
@@ -93,6 +88,48 @@
     .fixed-icons img {
         width: 40px;
         height: 100%;
+    }
+
+    .profile-card {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .profiles-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        height: 450px;
+    }
+
+    .profile-card {
+        scroll-snap-align: start;
+        padding: 10px;
+    }
+    .avatar {
+        height: 60px;
+        width: 60px;
+    }
+    .text-info h2 {
+        font-size: 1.2rem;
+    }
+    .text-info p {
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+}
+
+
+@media (min-width: 768px) {
+    /* Máy tính: Hiển thị 3 thẻ */
+    .profile-card {
+        width: calc(33.333% - 20px);
+    }
+
+    .profiles-container {
+        flex-wrap: wrap;
+        justify-content: flex-start;
     }
 }
 
